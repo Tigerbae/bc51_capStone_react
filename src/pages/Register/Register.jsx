@@ -78,7 +78,7 @@ export default function Register() {
     <div className="w-25 mx-auto py-5">
       <form onSubmit={handleSubmit}>
         <div className="form-group">
-          <label htmlFor="">Tai Khoan</label>
+          <label >Tai Khoan</label>
           <input
             onChange={handleChange}
             type="text"
@@ -88,7 +88,7 @@ export default function Register() {
           <span ref={taiKhoanRef} className="error text-danger"></span>
         </div>
         <div className="form-group">
-          <label htmlFor="">Mat Khau</label>
+          <label >Mat Khau</label>
           <input
             onChange={handleChange}
             type="text"
@@ -98,7 +98,7 @@ export default function Register() {
           <span ref={matKhauRef} className="error text-danger"></span>
         </div>
         <div className="form-group">
-          <label htmlFor="">Email</label>
+          <label >Email</label>
 
           <input
             onChange={handleChange}
@@ -109,7 +109,7 @@ export default function Register() {
           <span ref={emailRef} className="error text-danger"></span>
         </div>
         <div className="form-group">
-          <label htmlFor="">So Dien Thoai</label>
+          <label >So Dien Thoai</label>
           <input
             onChange={handleChange}
             type="number"
@@ -119,7 +119,7 @@ export default function Register() {
           <span ref={soDtRef} className="error text-danger"></span>
         </div>
         <div className="form-group">
-          <label htmlFor="">Ma Nhom</label>
+          <label >Ma Nhom</label>
           <input
             disabled
             type="number"
@@ -130,7 +130,7 @@ export default function Register() {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="">Ho Ten</label>
+          <label >Ho Ten</label>
           <input
             onChange={handleChange}
             type="text"

@@ -18,7 +18,7 @@ export default function Home() {
   const renderMovieList = () => {
     return movieList.map((element) => {
       return (
-        <div key={element.maPhim} className="col-3">
+        <div key={element.maPhim} className="col">
           <div
             className="card movie-card"
             style={{ marginBottom: 20, height: 500 }}
@@ -77,7 +77,7 @@ export default function Home() {
         </ol>
         <div className="carousel-inner">{renderBannerList()}</div>
       </div>
-      <div className="py-5">
+      <div className="py-5 bg-movieList">
         <div className="row mt-3 mx-auto w-75">{renderMovieList()}</div>
       </div>
     </>

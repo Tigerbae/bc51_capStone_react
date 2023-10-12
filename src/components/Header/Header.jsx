@@ -2,6 +2,7 @@ import React from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { setUserInfoAction } from "../../store/actions/userAction";
+import "./style.scss";
 export default function Header() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -29,19 +30,31 @@ export default function Header() {
           </button>
         </>
       );
-    }else{
-     return<><span>Hi~ {userState.userInfo.hoTen}</span> <button onClick={handleLogout} className="btn btn-danger">LOUTOUT</button></>
+    } else {
+      return (
+        <>
+          <span>Hi~ {userState.userInfo.hoTen}</span>{" "}
+          <button onClick={handleLogout} className="btn btn-danger">
+            LOUTOUT
+          </button>
+        </>
+      );
     }
   };
-  const handleLogout =()=>{
-   localStorage.removeItem("USER_INFO")
-   dispatch(setUserInfoAction(null))
-   navigate("/")
-  }
+  const handleLogout = () => {
+    localStorage.removeItem("USER_INFO");
+    dispatch(setUserInfoAction(null));
+    navigate("/");
+  };
   return (
-    <nav className="navbar navbar-expand-sm navbar-light bg-light">
-      <a className="navbar-brand" href="#">
-        Phimmoi
+    <nav className="navbar navbar-expand-sm navbar-light fix-hidden">
+      <a className="navbar-brand wrapper" href="#">
+        <div>
+          <div className="top">PhimHay</div>
+          <div className="bottom" aria-hidden="true">
+            PhimHay
+          </div>
+        </div>
       </a>
       <button
         className="navbar-toggler d-lg-none"
